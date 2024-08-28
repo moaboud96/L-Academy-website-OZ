@@ -18,7 +18,6 @@ ul {
 }
 /* End Global Rules  */
 
-
 /* start Variables */
 :root { 
     --main-color: #2196f3; 
@@ -26,3 +25,34 @@ ul {
 }
 /* end variables  */
 
+
+/* Container  */
+.container { 
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container { 
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container { 
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container { 
+        width: 1170px;
+    }
+}
+
+/* end Container  */
