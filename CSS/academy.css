@@ -214,17 +214,14 @@ ul {
 
 
 .landing .image img { 
+    position: relative;
     width: 600px;
-    max-width: 100%;
+    animation: up-and-down 3s linear infinite;
 }
 @media (max-width: 991px) { 
     .landing .image img { 
         display: none;
     }
-}
-
-.landing .image img {
-
 }
 
 .landing .go-down { 
@@ -239,7 +236,31 @@ ul {
     
 }
 .landing .go-down i { 
+    animation: bouncing 1.5s infinite;
 
 }
 
 /* end landing */
+
+
+/* start animation  */
+
+@keyframes up-and-down {
+    0%, 100% {
+        top: 0;
+
+    }
+    50% {
+        top: -30px;
+    }
+}
+
+@keyframes bouncing {
+    0%, 10%, 20%, 50%, 80%, 100% { 
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-15px);
+    }
+}
+/* end animation */
