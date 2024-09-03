@@ -556,6 +556,7 @@ ul {
 }
 .gallery .box img { 
     max-width: 100%;
+    transition: var(--main-transition-duration);
 }
 
 .gallery .box .image { 
@@ -569,14 +570,20 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #1786e051;
-    width: 10px;
-    height: 10px;
+    background-color: #1786e022;
+    width: 0px;
+    height: 0px;
     opacity: 0;
+    z-index: 2;
 }
 
 .gallery .box .image:hover::before { 
     animation: flashing 0.7s;
 }
+
+.gallery .box .image:hover img { 
+    transform: rotate(5deg) scale(1.1);
+}
+
 
 /* end gallery  */
