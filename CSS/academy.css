@@ -29,6 +29,7 @@ ul {
     --main-transition-duration: 0.3s;
     --main-padding-top: 100px; 
     --main-padding-bottom: 100px;
+    --section-backgroundColor: #ececec; 
 }
 /* end variables  */
 
@@ -171,6 +172,17 @@ ul {
 @keyframes moving-arrow { 
     100% { 
         transform: translateX(10px);
+    }
+}
+
+@keyframes flashing {
+    0%, 40% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        width: 200%;
+        height: 200%;
     }
 }
 
@@ -373,7 +385,7 @@ ul {
     top: -100px;
     width: 100%;
     height: 100%;
-    background-color: #ececec;
+    background-color: var(--section-backgroundColor);
     z-index: -1;
     transform: skewY(-6deg);
 
@@ -521,3 +533,50 @@ ul {
 }
 
 /* end articles  */
+
+/* start gallery  */
+
+.gallery { 
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-backgroundColor);
+    position: relative;
+}
+
+.gallery .container { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gallery .box { 
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 12px 10px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%) ;
+}
+.gallery .box img { 
+    max-width: 100%;
+}
+
+.gallery .box .image { 
+    position: relative;
+    overflow: hidden;
+
+}
+.gallery .box .image::before { 
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1786e051;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+}
+
+.gallery .box .image:hover::before { 
+    animation: flashing 0.7s;
+}
+
+/* end gallery  */
