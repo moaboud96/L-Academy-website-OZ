@@ -786,3 +786,16 @@ ul {
 }
 
 /* end Testimonials */
+
+
+/* start team members */
+
+.team { 
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+
+}
+
+
+/* end team members */
