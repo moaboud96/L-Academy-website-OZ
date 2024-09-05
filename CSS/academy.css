@@ -1383,10 +1383,24 @@ ul {
     content: "\f00c";
     margin-right: 10px;
     font-weight: 900;
+    color: var(--main-color);
 }
 
+.pricing .box a {
+    display: block;
+    width: fit-content;
+    border: 2px solid var(--main-color);
+    margin: 30px auto 40px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--main-color);
+    transition: var(--main-transition-duration);
+}
 
-
-
+.pricing .box a:hover { 
+    color: white;
+    background-color: var(--main-color-alt);
+}
 
 /* end pricing  */
