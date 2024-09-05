@@ -1426,6 +1426,12 @@ ul {
     border: 1px solid #ddd;
 }
 
+@media (max-width: 991px) { 
+    .videos .holder { 
+        flex-direction: column;
+    }
+}
+
 .videos .holder .list { 
     min-width: 300px;
     background-color: white;
@@ -1476,6 +1482,5 @@ ul {
 .videos .holder .preview img { 
     max-width: 100%;
 }
-    
 
 /* end videos  */
