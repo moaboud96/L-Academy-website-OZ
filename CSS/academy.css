@@ -1767,12 +1767,56 @@ ul {
 .footer .box .links li:hover { 
     padding-left: 10px;
 }
+
+.footer .box .links li a::before { 
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
 .footer .box .links li:hover a { 
     color: white;
 }   
 
+.footer .box .links li a { 
+    color: #b9b9b9;
+    transition: var(--main-transition-duration);
+}
 
+.footer .box .line { 
+    display: flex;
+    align-items: center;
+    color: #b9b9b9;
+    margin-bottom: 30px;
+}
 
+.footer .box .line i { 
+    font-size: 25px;
+    color: var(--main-color);
+    margin-right: 10px;
+}
 
+.footer .box .line .info { 
+    line-height: 1.8;
+    flex: 1;
+}
 
+.footer .box .line .info span { 
+    display: block;
+}
+
+.footer .footer-gallery img { 
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
+}
+
+.footer .copyright { 
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+}
 /* end footer  */
